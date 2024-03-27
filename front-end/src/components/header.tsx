@@ -76,20 +76,22 @@ function ResponsiveAppBar() {
     <AppBar position="static" sx={{backgroundColor: "#FFFFFF"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <PineconeHeaderLogo />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', fontFamily: "SF Pro Text" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#000000', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          
+            <PineconeHeaderLogo />
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            </Box>
+            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', fontFamily: "SF Pro Text" } }}>
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: '#000000', display: 'block', marginLeft: '20px'}}
+                >
+                  {page}
+                </Button>
+              ))}
+            
           </Box>
           <Search sx={{ border: 'solid', borderRadius: '8px', borderColor: '#000000', marginRight: '30px'}}>
             <SearchIconWrapper >
