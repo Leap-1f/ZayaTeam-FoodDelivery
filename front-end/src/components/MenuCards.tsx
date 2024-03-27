@@ -10,17 +10,21 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 
+import handleOpen from "../components/OrderDetail";
+import { Typography } from "@mui/material";
+
 export default function RecipeReviewCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card onClick={handleOpen} sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        height="194"
-        image="/unsplash_fdlZBWIP0aM"
-        alt="Paella dish"
+        height="186"
+        image="https://www.foodandwine.com/thmb/OH220PwOZfcTiwuJzkvLANWHw1w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/egg-bhurjee-FT-RECIPE0521-f9573d8c81bb4c9597a9621c0ac064ae.jpg"
+        alt="breackfast"
       />
-      <CardContent>
-        <CardHeader title="Өглөөний хоол" subheader="14'800₮" />
+      <CardContent sx={{ padding: 0 }}>
+        <Typography variant="h6">Өглөөний хоол</Typography>
+        <Typography sx={{ color: "#18BA51" }}>14'800₮</Typography>
       </CardContent>
     </Card>
   );
