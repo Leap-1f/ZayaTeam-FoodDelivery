@@ -1,14 +1,9 @@
-// const names: {name : string, age: number}[] = [
-//   {name: "dsad", age: 12},
-//   {name: "dsdasdasad", age: 1212}
-// ]
-
-import MenuCards from "@/components/MenuCards";
+import ResponsiveAppBar from "@/components/header";
 
 export default function Home() {
   return (
-    <>
-      <MenuCards />
-    </>
-  );
+    <div>
+        <ResponsiveAppBar />
+    </div>
+  )
 }
