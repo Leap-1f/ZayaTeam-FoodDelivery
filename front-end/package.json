@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.12",
@@ -19,6 +20,21 @@
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.8"
+=======
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
+    "@mui/material-nextjs": "^5.15.11",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "formik": "^2.4.5",
+    "next": "^14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "styled-components": "^6.1.8",
+    "yup": "^1.4.0"
+>>>>>>> b72569db2a35d0e3700200448c5cf01dce535a03
   },
   "devDependencies": {
     "@types/node": "^20",
