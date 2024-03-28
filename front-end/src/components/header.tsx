@@ -32,6 +32,11 @@ function ResponsiveAppBar() {
     null
   );
 
+function Header() {
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+
+
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -75,6 +80,7 @@ function ResponsiveAppBar() {
   };
 
   return (
+
     <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -100,7 +106,7 @@ function ResponsiveAppBar() {
               >
                 {page}
               </Button>
-            ))}
+
           </Box>
           <Search
             sx={{
@@ -142,4 +148,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+
+export default Header;
