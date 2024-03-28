@@ -24,7 +24,7 @@ import InputBase from '@mui/material/InputBase';
 
 const pages = ['НҮҮР', 'ХООЛНЫ ЦЭС', 'ХҮРГЭЛТИЙН БҮС'];
 
-function ResponsiveAppBar() {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -73,14 +73,13 @@ function ResponsiveAppBar() {
 
 
   return (
-    <AppBar position="static" sx={{backgroundColor: "#FFFFFF"}}>
-      <Container maxWidth="xl">
+    <AppBar position="static" sx={{backgroundColor: "#FFFFFF", width: '100%', boxShadow: '0'}}>
+      <Container sx={{width: '80%'}}>
         <Toolbar disableGutters>
           
             <PineconeHeaderLogo />
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            
+            <AdbIcon />
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', fontFamily: "SF Pro Text" } }}>
               {pages.map((page) => (
                 <Button
@@ -117,4 +116,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Header;
