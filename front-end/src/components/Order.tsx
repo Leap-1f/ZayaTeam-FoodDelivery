@@ -132,7 +132,7 @@ export default function Order() {
             }}
           >
             <HeaderBucketIcon />
-            Сагс
+            Сагс  
           </Box>
           <Drawer
             anchor={anchor}
