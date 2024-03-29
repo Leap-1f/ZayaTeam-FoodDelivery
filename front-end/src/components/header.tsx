@@ -31,6 +31,7 @@ function ResponsiveAppBar() {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
+}
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -87,27 +88,26 @@ function Header() {
           <PineconeHeaderLogo />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}></Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex", fontFamily: "SF Pro Text" },
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "#000000",
-                  display: "block",
-                  marginLeft: "20px",
-                }}
-              >
-                {page}
-              </Button>
-
-          </Box>
+          <Box sx={{
+          flexGrow: 1,
+          display: { xs: "none", md: "flex" },
+          fontFamily: "SF Pro Text"
+            }}>
+          {pages.map((page) => (
+            <Button
+              key={page}
+              onClick={handleCloseNavMenu}
+              sx={{
+                my: 2,
+                color: "#000000",
+                display: "block",
+                marginLeft: "20px",
+              }}
+            >
+              {page}
+            </Button>
+          ))}
+        </Box>
           <Search
             sx={{
               border: "solid",
@@ -146,7 +146,9 @@ function Header() {
         </Toolbar>
       </Container>
     </AppBar>
+        
   );
 }
+
 
 export default Header;
