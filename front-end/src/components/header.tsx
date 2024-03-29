@@ -82,7 +82,7 @@ function Header() {
 
   return (
 
-    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF", boxShadow: '', width: '100%' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PineconeHeaderLogo />
