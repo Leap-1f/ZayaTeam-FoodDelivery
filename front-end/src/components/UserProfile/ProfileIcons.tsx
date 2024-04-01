@@ -6,7 +6,7 @@ export const UserIcon=()=>{
         <Box>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                     <circle cx="25" cy="25" r="24" fill="white" stroke="#EEEFF2" />
-                    <mask id="mask0_1_1282" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="13" y="13" width="24" height="24">
+                    <mask id="mask0_1_1282" maskUnits="userSpaceOnUse" x="13" y="13" width="24" height="24">
                         <rect x="13" y="13" width="24" height="24" fill="#D9D9D9" />
                     </mask>
                     <g mask="url(#mask0_1_1282)">
