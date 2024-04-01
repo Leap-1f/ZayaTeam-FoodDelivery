@@ -1,21 +1,17 @@
 import { useState, KeyboardEvent, MouseEvent, Fragment } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { Card, CardHeader, Typography, IconButton } from "@mui/material";
+import {
+  Card,
+  CardHeader,
+  Typography,
+  IconButton,
+  Button,
+} from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Pagination from "@mui/material/Pagination";
-import HeaderBucketIcon from "./svg/headerbucketiconsvg";
-import Avatar from "@mui/material";
+import HeaderBucketIcon from "./svg/HeaderBucketIconSvg";
 import { ArrowFront } from "./svg/ZayaSvg";
 import { Close } from "./svg/ZayaSvg";
 
@@ -40,79 +36,129 @@ export default function Order() {
     };
 
   const list = (anchor: Anchor) => (
-    <Box
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-      sx={{ padding: "24px", width: 586, height: "100vh" }}
-    >
-      <CardHeader
-        sx={{ display: "flex", flexDirection: "row-reverse", gap: "171px" }}
-        title="Таны сагс"
-        action={
-          <IconButton aria-label="settings">
-            <ArrowFront />
-          </IconButton>
-        }
-      />
-      <Card
+    <>
+      <Box
+        role="presentation"
+        onClick={toggleDrawer(anchor, false)}
+        onKeyDown={toggleDrawer(anchor, false)}
         sx={{
-          display: "flex",
-          width: 538,
-          height: 182,
-          padding: "16px",
-          gap: "16px",
-          alignItems: "center",
+          padding: "24px",
+          width: 586,
+          height: "100vh",
+          flexDirection: "column",
+          justifyContent: "space-between",
         }}
       >
-        <>
-          <CardMedia
-            sx={{ width: "100%", height: "100%" }}
-            component="img"
-            image="https://www.realsimple.com/thmb/fMh6cWLYxsddO3BuSJXanCk1gpI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-dinner-recipes-f768402675e04452b1531360736da8b5.jpg"
-            alt="lunch"
-          />
-          <CardContent
+        <CardContent>
+          <CardHeader
             sx={{
-              width: "100%",
-              height: "100%",
               display: "flex",
-              flexDirection: "column",
-              gap: "8px",
-              padding: 0,
+              flexDirection: "row-reverse",
+              gap: "171px",
+              borderBottom: "1px solid #D6D8DB",
+              paddingBottom: "50px",
+            }}
+            title="Таны сагс"
+            action={
+              <IconButton aria-label="settings">
+                <ArrowFront />
+              </IconButton>
+            }
+          />
+          <Card
+            sx={{
+              display: "flex",
+              width: 538,
+              height: 182,
+              padding: "16px",
+              gap: "16px",
+              alignItems: "center",
+              boxShadow: "none",
+              borderBottom: "1px solid #D6D8DB",
+              paddingY: "30px",
             }}
           >
-            <CardContent sx={{ padding: 0, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <Typography>
-                <Typography variant="h6">Өдрийн хоол</Typography>
-                <Typography sx={{ color: "#18BA51" }}>23'000₮</Typography>
-              </Typography>
-              <IconButton aria-label="settings">
-                <Close />
-              </IconButton>
-            </CardContent>
-            <CardContent sx={{ padding: 0 }}>
-              <Typography
-                variant="body2"
-                color="text.secondary"
+            <>
+              <CardMedia
+                sx={{ width: "100%", height: "100%" }}
+                component="img"
+                image="https://www.realsimple.com/thmb/fMh6cWLYxsddO3BuSJXanCk1gpI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-dinner-recipes-f768402675e04452b1531360736da8b5.jpg"
+                alt="lunch"
+              />
+              <CardContent
                 sx={{
-                  padding: "8px",
-                  backgroundColor: "#F6F6F6",
-                  color: "#767676",
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                  padding: 0,
                 }}
               >
-                Үхрийн мах, амталж шарсан алим,
-              </Typography>
-            </CardContent>
-            <Pagination
-              sx={{ display: "flex", justifyContent: "center" }}
-              count={100}
-              siblingCount={0}
-            />
-          </CardContent>
-        </>
-      </Card>
-    </Box>
+                <CardContent
+                  sx={{
+                    padding: 0,
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Typography>
+                    <Typography variant="h6">Өдрийн хоол</Typography>
+                    <Typography sx={{ color: "#18BA51" }}>23'000₮</Typography>
+                  </Typography>
+                  <IconButton aria-label="settings">
+                    <Close />
+                  </IconButton>
+                </CardContent>
+                <CardContent sx={{ padding: 0 }}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      padding: "8px",
+                      backgroundColor: "#F6F6F6",
+                      color: "#767676",
+                    }}
+                  >
+                    Үхрийн мах, амталж шарсан алим,
+                  </Typography>
+                </CardContent>
+                <Pagination
+                  sx={{ display: "flex", justifyContent: "center" }}
+                  count={100}
+                  siblingCount={0}
+                />
+              </CardContent>
+            </>
+          </Card>
+        </CardContent>
+      </Box>
+      <CardContent
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          boxShadow: "0 0 10px 0 #D6D8DB",
+          padding: "10px 32px 30px 32px",
+        }}
+      >
+        <Typography sx={{ paddingX: "10px" }}>
+          <Typography>Нийт төлөх дүн</Typography>
+          <Typography variant="h6">34'800₮</Typography>
+        </Typography>
+        <Button
+          sx={{
+            backgroundColor: "#18BA51",
+            width: "256px",
+            height: "48px",
+            paddingX: "10px",
+          }}
+          variant="contained"
+        >
+          Захиалах
+        </Button>
+      </CardContent>
+    </>
   );
 
   return (
@@ -132,7 +178,7 @@ export default function Order() {
             }}
           >
             <HeaderBucketIcon />
-            Сагс  
+            Сагс
           </Box>
           <Drawer
             anchor={anchor}
