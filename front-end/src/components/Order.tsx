@@ -11,7 +11,7 @@ import {
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Pagination from "@mui/material/Pagination";
-import HeaderBucketIcon from "./svg/HeaderBucketIconSvg";
+import HeaderBucketIcon from "./svg/headerbucketiconsvg";
 import { ArrowFront } from "./svg/ZayaSvg";
 import { Close } from "./svg/ZayaSvg";
 
