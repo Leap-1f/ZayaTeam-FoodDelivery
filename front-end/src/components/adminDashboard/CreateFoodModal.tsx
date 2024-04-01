@@ -4,9 +4,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
-import { CardContent, CardHeader } from "@mui/material";
-import { Close } from "./svg/ZayaSvg";
-import IconButton from "@mui/material";
 
 const style = {
   position: "absolute" as "absolute",
@@ -14,7 +11,6 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 587,
-  height: "fit",
   bgcolor: "background.paper",
   //   border: "2px solid #000",
   boxShadow: 24,
@@ -28,23 +24,20 @@ export default function CreateFood() {
 
   return (
     <div>
-      <Button
-        sx={{ backgroundColor: "#18BA51", color: "white" }}
-        onClick={handleOpen}
-      >
-        Add new food
-      </Button>
+      <Button onClick={handleOpen}>Create Food</Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
         </Box>
       </Modal>
     </div>
