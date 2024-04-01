@@ -1,6 +1,6 @@
 import ResponsiveAppBar from "@/components/header";
 import LogInModal from "@/components/login/LoginModal";
-import {Box} from "@mui/material"
+import {Box} 
 export default function LogIn():JSX.element {
   return (
     <>
