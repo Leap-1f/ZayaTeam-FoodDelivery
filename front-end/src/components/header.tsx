@@ -11,6 +11,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Order from "./Order";
+import Link from "next/link";
 
 const pages = ["НҮҮР", "ХООЛНЫ ЦЭС", "ХҮРГЭЛТИЙН БҮС"];
 
@@ -114,19 +115,21 @@ export default function Header() {
           </Search>
           <Box sx={{ display: "flex", gap: "40px" }}>
             <Order />
-            <Box
-              sx={{
-                color: "#000000",
-                fontFamily: "sans-serif",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                cursor: "pointer",
-              }}
-            >
-              <HeaderLogInIcon />
-              Нэвтрэх
-            </Box>
+            <Link href={"../logIn"} >
+              <Box
+                sx={{
+                  color: "#000000",
+                  fontFamily: "sans-serif",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  cursor: "pointer",
+                }}
+              >
+                <HeaderLogInIcon />
+                Нэвтрэх
+              </Box>
+            </Link>
           </Box>
         </Toolbar>
       </Container>

@@ -30,7 +30,7 @@ const linkItems = [
   { text: "Нүүр", href: "@/components/pages/layout/index" },
   { text: "Холбоо барих", href: "@/components/pages/layout/contact" },
   { text: "Хоолны цэс", href: "@/components/pages/layout/menu" },
-  { text: "Үйлчилгээний нөхцөл", href: "@/components/pages/layout/terms" },
+  { text: "Үйлчилгээний нөхцөл", href: "../terms/termsofservice" },
   {
     text: "Хүргэлтийн бүс",
     href: "@/components/pages/layout/delivery-zone",
