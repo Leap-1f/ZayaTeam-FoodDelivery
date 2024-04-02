@@ -21,22 +21,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import AnchorTemporaryDrawer from "./Order";
+import { link } from "fs";
 
-const pages = ["НҮҮР", "ХООЛНЫ ЦЭС", "ХҮРГЭЛТИЙН БҮС"];
-
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
-}
+const pages = [
+  { text: "НҮҮР", href: "@/" },
+  { text: "Хоолны цэс", href: "@/components/pages/menu" },
+  { text: "Хүргэлтийн бүс", href: "@/components/pages/delivery-zone" },
+];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
 
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -81,33 +76,34 @@ function Header() {
   };
 
   return (
-
     <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PineconeHeaderLogo />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}></Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Box sx={{
-          flexGrow: 1,
-          display: { xs: "none", md: "flex" },
-          fontFamily: "SF Pro Text"
-            }}>
-          {pages.map((page) => (
-            <Button
-              key={page}
-              onClick={handleCloseNavMenu}
-              sx={{
-                my: 2,
-                color: "#000000",
-                display: "block",
-                marginLeft: "20px",
-              }}
-            >
-              {page}
-            </Button>
-          ))}
-        </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "SF Pro Text",
+            }}
+          >
+            {pages.map((page, index) => (
+              <Button
+                key={index}
+                href={page.href} // Corrected this line
+                sx={{
+                  my: 2,
+                  color: "#000000",
+                  display: "block",
+                  marginLeft: "20px",
+                }}
+              >
+                {page.text}
+              </Button>
+            ))}
+          </Box>
           <Search
             sx={{
               border: "solid",
@@ -117,9 +113,7 @@ function Header() {
             }}
           >
             <SearchIconWrapper>
-              <SearchIcon
-                sx={{ color: "#000000", marginLeft: "-5px", cursor: "pointer" }}
-              />
+              <SearchIcon sx={{ color: "#000000", marginLeft: "-5px", cursor: "pointer" }} />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Хайх"
@@ -146,9 +140,7 @@ function Header() {
         </Toolbar>
       </Container>
     </AppBar>
-        
   );
 }
-
 
 export default Header;

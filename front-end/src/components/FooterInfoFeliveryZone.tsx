@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import DeliveryAreaMap from "./svg/deliveryareamapsvg";
 import StarIcon from "./svg/stariconsvg";
 
-export default function FooterInfoDeliveryArea() {
+export default function FooterInfoDeliveryZone() {
     return (
         <Box sx={{width: '100%',display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
             <Box sx={{width: '60%%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '40px'}}>
