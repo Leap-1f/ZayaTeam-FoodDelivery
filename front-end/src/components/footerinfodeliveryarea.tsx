@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import DeliveryAreaMap from "./svg/DeliveryAreaMapSvg";
+import DeliveryAreaMap from "./svg/deliveryareamapsvg";
 import StarIcon from "./svg/stariconsvg";
 
 export default function FooterInfoDeliveryArea() {

@@ -1,4 +1,5 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
+import Link from "next/link";
 
 export default function LogInModal() {
     return (
@@ -14,12 +15,16 @@ export default function LogInModal() {
                         <Typography variant="h6" >Нууц үг </Typography>
                         <TextField sx={{ width: "100%", backgroundColor: "#F7F7F8" }} id="outlined-basic" label="Нууц үг  " ></TextField>
                     </Box>
-                    <Typography  sx={{textAlign:"end"}} >Нууц үг сэргээх</Typography>
+                    <Link   href={"./forgetPass/forgetPassWord"} >
+                  
+                    <Typography    sx={{textAlign:"end"}}  >Нууц үг сэргээх</Typography>
+                    </Link>
                 </Box>
                 <Box sx={{ display: "flex", flexDirection: "column", gap: "32px" }}>
                     <Button variant="contained" sx={{ color: "black", backgroundColor: "#EEEFF2", width: "100%",boxShadow:"none",height:"45px"}}>Нэвтрэх</Button>
                     <Typography sx={{ textAlign: "center" }}  >Эсвэл </Typography>
-                    <Button variant="outlined" sx={{ color: "black", borderColor: "#18BA51", width: "100%" }}>Бүртгүүлэх</Button>
+                    <Link href={"./signUp/signup"}>
+                    <Button variant="outlined" sx={{ color: "black", borderColor: "#18BA51", width: "100%" }}>Бүртгүүлэх</Button></Link>
                 </Box>
             </Box>
         </>
