@@ -5,7 +5,7 @@ import { typography } from "@mui/system";
 export default function TermsOfService() {
   return (
     <Box
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center"}}
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
       <Box
         sx={{
@@ -16,6 +16,8 @@ export default function TermsOfService() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          paddingTop: "100px",
+          paddingBottom: "100px",
         }}
       >
         <Box sx={{ display: "flex" }}>
