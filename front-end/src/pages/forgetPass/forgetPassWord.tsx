@@ -1,4 +1,4 @@
-import ResetNewPassword from "@/components/ResetNewPassword";
+import ResetNewPassword from "@/components/forgetPassword/ResetNewPassword";
 import { Box } from "@mui/material";
 import { useState } from "react";
 
