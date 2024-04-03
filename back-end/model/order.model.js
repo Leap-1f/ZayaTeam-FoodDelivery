@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, now } from "mongoose";
 import { COLLECTIONS } from "../constant";
 
 export const OrderSchema = model(
@@ -21,6 +21,7 @@ export const OrderSchema = model(
     },
     createDate: {
       type: Date,
+      default: Date.now,
       require: true,
     },
     district: String,

@@ -1,6 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
-import { UserSchema } from "./model/user.model.js";
+import { UserSchema, } from "./model/user.model.js";
+import { CategorySchema } from "./model/category.model.js";
+import { FoodSchema } from "./model/food.model.js";
+import { OrderSchema } from "./model/order.model.js";
 
 const port = 8080;
 const app = express();
@@ -22,6 +25,12 @@ app.post("/user", async (req, res) => {
   res.send("ajilla");
 });
 
+app.post("/food", async (req, res) => {
+  const category = await FoodSchema.create({
+    name: "Asia",
+
+  })
+})
 
 //hicheel deer uxsen hiij uzeerei ---->
 
