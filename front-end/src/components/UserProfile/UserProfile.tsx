@@ -2,7 +2,7 @@ import { Avatar, Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 
 
-export const UserProfileEdit = () => {
+export const UserProfile = () => {
   const [edit,setEdit] = useState(true)
   const userEdit = ()=>{
     setEdit(!edit)

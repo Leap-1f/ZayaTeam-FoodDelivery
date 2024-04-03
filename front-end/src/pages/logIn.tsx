@@ -1,12 +1,16 @@
-import ResponsiveAppBar from "@/components/Header";
-import LogInModal from "@/components/login/LoginModal";
+import LogIn from "@/components/logIn/Login";
 import { Box } from "@mui/material";
-export default function LogIn():JSX.Element{
+
+export default function Profile() {
   return (
-    <>
-      <Box sx={{ display: "flex", justifyContent: "center" , height:"70vh", paddingTop:"100px" }}>
-        <LogInModal></LogInModal>
-      </Box>
-    </>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <LogIn />;
+    </Box>
   );
 }
