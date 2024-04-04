@@ -59,21 +59,77 @@ export default function HomePage() {
                     </Box>
                 </Box>
                 <Box sx={{marginX: '376px'}}>
-                    <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
-                            <StarIcon />
-                            <Typography sx={{fontSize: '22px'}}>Хямдралтай</Typography>
+                    <Box sx={{}}>
+                        <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
+                            <Box sx={{display: 'flex', alignItems: 'center'}}>
+                                <StarIcon />
+                                <Typography sx={{fontSize: '22px', marginLeft: '10px'}}>Хямдралтай</Typography>
+                            </Box>
+                            <Box sx={{display: 'flex', alignItems: 'center', color: '#18BA51', gap: '5px', cursor: 'pointer'}}>
+                                Бүгдийг харах 
+                                <HomePageGreenRightArrow />
+                            </Box>
                         </Box>
-                        <Box sx={{display: 'flex', alignItems: 'center', color: '#18BA51', gap: '5px', cursor: 'pointer'}}>
-                            Бүгдийг харах 
-                            <HomePageGreenRightArrow />
+                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
                         </Box>
                     </Box>
-                    <Box sx={{}}>
-                        <RecipeReviewCard />
-                        <RecipeReviewCard />
-                        <RecipeReviewCard />
-                        <RecipeReviewCard />
+                    <Box sx={{marginTop: '100px'}}>
+                        <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
+                            <Box sx={{display: 'flex', alignItems: 'center'}}>
+                                <StarIcon />
+                                <Typography sx={{fontSize: '22px', marginLeft: '10px'}}>Үндсэн хоол</Typography>
+                            </Box>
+                            <Box sx={{display: 'flex', alignItems: 'center', color: '#18BA51', gap: '5px', cursor: 'pointer'}}>
+                                Бүгдийг харах 
+                                <HomePageGreenRightArrow />
+                            </Box>
+                        </Box>
+                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                        </Box>
+                    </Box>
+                    <Box sx={{marginTop: '100px'}}>
+                        <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
+                            <Box sx={{display: 'flex', alignItems: 'center'}}>
+                                <StarIcon />
+                                <Typography sx={{fontSize: '22px', marginLeft: '10px'}}>Салад ба зууш</Typography>
+                            </Box>
+                            <Box sx={{display: 'flex', alignItems: 'center', color: '#18BA51', gap: '5px', cursor: 'pointer'}}>
+                                Бүгдийг харах 
+                                <HomePageGreenRightArrow />
+                            </Box>
+                        </Box>
+                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                        </Box>
+                    </Box>
+                    <Box sx={{marginY: '100px'}}>
+                        <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
+                            <Box sx={{display: 'flex', alignItems: 'center'}}>
+                                <StarIcon />
+                                <Typography sx={{fontSize: '22px', marginLeft: '10px'}}>Амттан</Typography>
+                            </Box>
+                            <Box sx={{display: 'flex', alignItems: 'center', color: '#18BA51', gap: '5px', cursor: 'pointer'}}>
+                                Бүгдийг харах 
+                                <HomePageGreenRightArrow />
+                            </Box>
+                        </Box>
+                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                            <RecipeReviewCard />
+                        </Box>
                     </Box>
                 </Box>
             </Box>
