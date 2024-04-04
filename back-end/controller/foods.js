@@ -34,7 +34,7 @@ export const addFood = async (req, res) => {
       discount: discount,
       category: category,
     });
-    req.send(data);
+    res.send(data);
     const { id } = data;
 
     const sendId = await CategoryModel.findOneandupdate(category, {
