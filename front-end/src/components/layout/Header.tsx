@@ -14,9 +14,6 @@ import Order from "../orderDetail/Order";
 import Link from "next/link";
 import { useState } from "react";
 
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-
 const pages = ["НҮҮР", "ХООЛНЫ ЦЭС", "ХҮРГЭЛТИЙН БҮС"];
 
 export default function Header() {

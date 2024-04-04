@@ -9,13 +9,16 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
+<<<<<<<< HEAD:front-end/src/components/home/MenuCard.tsx
 
 import handleOpen from "../orderDetail/OrderDetail";
+========
+>>>>>>>> main:front-end/src/components/MenuCards.tsx
 import { Typography } from "@mui/material";
 
 export default function RecipeReviewCard() {
   return (
-    <Card onClick={handleOpen} sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="186"
