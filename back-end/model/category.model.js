@@ -1,9 +1,9 @@
 import { Schema, model } from "mongoose";
-import { COLLECTIONS } from "../constant";
+import { COLLECTIONS } from "../constant/index.js";
 
-export const CategorySchema = model(
-  "category",
-  Schema({
+export const CategoryModel = model(
+  "categorys",
+  new Schema({
     name: String,
     foodId: {
       type: [Schema.Types.ObjectId],
