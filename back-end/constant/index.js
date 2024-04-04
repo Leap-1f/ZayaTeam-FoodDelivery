@@ -1,5 +1,5 @@
 export const COLLECTIONS = {
-  USER: "user",
+  USERS: "users",
   ORDER: "orders",
   FOOD: "foods",
   CATEGORY: "categories",

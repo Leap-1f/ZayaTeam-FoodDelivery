@@ -1,9 +1,9 @@
 import { Schema, model, now } from "mongoose";
-import { COLLECTIONS } from "../constant";
+import { COLLECTIONS } from "../constant/index.js";
 
-export const OrderSchema = model(
-  "order",
-  Schema({
+export const OrderModel = model(
+  "orders",
+  new Schema({
     userId: {
       type: Schema.Types.ObjectId,
     },
