@@ -1,5 +1,4 @@
-{
-  "compilerOptions": {
+{ "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,6 +15,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/adminDashboard", "src/pages/footerInfo"],
   "exclude": ["node_modules"]
 }
