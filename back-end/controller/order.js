@@ -3,7 +3,7 @@ import { OrderModel } from "../model/order.model.js";
 
 export const getAllOrders = async (req, res) => {
   try {
-    const data = await OrderModel.find(COLLECTIONS.ORDER);
+    const data = await OrderModel.find();
     res.send(data);
   } catch (err) {
     console.log(err);
