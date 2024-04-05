@@ -21,7 +21,7 @@ mongoose
 
 app.use("/users", users);
 app.use("/categorys", categorys);
-app.use("order", orders);
+app.use("/order", orders);
 app.use("/foods", foods);
 // app.post("/user", async (req, res) => {
 
