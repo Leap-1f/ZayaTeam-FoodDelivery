@@ -1,9 +1,17 @@
 import { Schema, model, now } from "mongoose";
+<<<<<<< HEAD
+import { COLLECTIONS } from "../constant";
+
+export const OrderSchema = model(
+  "order",
+  Schema({
+=======
 import { COLLECTIONS } from "../constant/index.js";
 
 export const OrderModel = model(
   "orders",
   new Schema({
+>>>>>>> main
     userId: {
       type: Schema.Types.ObjectId,
     },
