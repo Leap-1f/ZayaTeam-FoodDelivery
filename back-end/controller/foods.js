@@ -35,11 +35,18 @@ export const addFood = async (req, res) => {
       category: category,
     });
     res.send(data);
-    const { id } = data;
+    const { _id } = data;
+    console.log(_id);
+    console.log(category);
+    await CategoryModel.findOneAndUpdate(
+      { name: data.category },
 
-    const sendId = await CategoryModel.findOneandupdate(category, {
-      foodId: id,
-    });
+      {
+        $push: {
+          foodId: _id,
+        },
+      }
+    );
   } catch (err) {
     console.log(err);
   }
