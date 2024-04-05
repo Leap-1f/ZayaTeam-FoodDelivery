@@ -4,7 +4,7 @@ import { COLLECTIONS } from "../constant/index.js";
 
 export const getAllFoods = async (req, res) => {
   try {
-    const data = await FoodSModel.find(COLLECTIONS.FOOD);
+    const data = await FoodSModel.find();
     res.send(data);
   } catch (err) {
     console.log(err);
