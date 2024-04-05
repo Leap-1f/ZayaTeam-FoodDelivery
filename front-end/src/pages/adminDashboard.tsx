@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import dotenv from "dotenv";
 import { Box } from "@mui/material";
+import { getAdminLayout } from "@/components/layout/AdminLayout";
 dotenv.config();
-const DEPLOYMENT_DB = process.env.DEPLOYMENT_URL;
+const DEPLOYMENT_DB = process.env.SERVER_URL;
+console.log(DEPLOYMENT_DB);
+
 interface AllFoodDataType {
   name: String;
   image: String;
@@ -11,15 +14,16 @@ interface AllFoodDataType {
   discount: Number;
   category: String;
 }
-
 export default function AdminDashboard() {
   const [allOrders, setAllOrders] = useState<AllFoodDataType[]>([]);
   const getAllOrders = async () => {
     try {
-      const res = await fetch(`https://fooddelivery-back-end.vercel.app/order`);
+      const res = await fetch(
+        `https://fooddelivery-back-end.vercel.app/order`,
+        { method: "GET" }
+      );
       const data = await res.json();
       setAllOrders(data);
-      console.log(allOrders);
     } catch (err) {
       console.log(err);
     }
@@ -27,9 +31,11 @@ export default function AdminDashboard() {
   useEffect(() => {
     getAllOrders();
   }, []);
+  console.log(allOrders);
   return (
     <>
-      <Box>sadasdas</Box>
+      <Box></Box>
     </>
   );
 }
+AdminDashboard.getLayout = getAdminLayout;
