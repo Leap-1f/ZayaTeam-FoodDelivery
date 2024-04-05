@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -63,7 +62,7 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF", boxShadow: "none" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PineconeLogo />

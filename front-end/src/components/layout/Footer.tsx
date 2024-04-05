@@ -55,6 +55,10 @@ const Footer: React.FC = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           gap: "10px",
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
         }}
       >
         <Box
