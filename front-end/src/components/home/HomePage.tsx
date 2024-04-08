@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import { TabPanel } from "@mui/joy";
 import { FitScreen } from "@mui/icons-material";
-import RecipeReviewCard from "../MenuCards";
 import HomePageSVG from "../icons/HomePageSVG";
 import { BookIcon, ClockIcon, GreenRightArrow, SaladIcon, StarIcon } from "../icons/iconSvg";
+import RecipeReviewCard from "./MenuCard";
 
 export default function HomePage() {
     return (
@@ -53,11 +53,12 @@ export default function HomePage() {
                     </Box>
                     <Box sx={{width: '15%',height: 'auto' , boxShadow: 'inherit', border:"solid", borderWidth: '1px', borderColor: '#D6D8DB', cursor: 'pointer', borderRadius: '16px', padding: '10px'}}>
                         <Box />
+                        <BookIcon />
                         <Typography sx={{color: '#272727', width: '100%', fontSize: '24px'}}>Хоолны өргөн сонголт</Typography>
                         <Typography sx={{color: '#272727', opacity: '75%', width: '100%', fontSize: '19px'}}>Захиалга бэлтгэлийн явцыг хянах</Typography>
                     </Box>
                 </Box>
-                <Box sx={{marginX: '376px'}}>
+                <Box sx={{marginX: '376px', width: '100%'}}>
                     <Box sx={{}}>
                         <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
                             <Box sx={{display: 'flex', alignItems: 'center'}}>
@@ -69,14 +70,14 @@ export default function HomePage() {
                                 <GreenRightArrow />
                             </Box>
                         </Box>
-                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                        <Box sx={{display: 'flex', marginTop: '30px', gap: '50px'}}>
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                         </Box>
                     </Box>
-                    <Box sx={{marginTop: '100px'}}>
+                    <Box sx={{marginTop: '100px', width: '100%'}}>
                         <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
                             <Box sx={{display: 'flex', alignItems: 'center'}}>
                                 <StarIcon />
@@ -87,14 +88,14 @@ export default function HomePage() {
                                 <GreenRightArrow />
                             </Box>
                         </Box>
-                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                        <Box sx={{display: 'flex', marginTop: '30px', gap: '50px'}}>
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                         </Box>
                     </Box>
-                    <Box sx={{marginTop: '100px'}}>
+                    <Box sx={{marginTop: '100px', width: '100%'}}>
                         <Box sx={{display: 'flex', fontFamily: 'sans-serif', justifyContent: 'space-between'}}>
                             <Box sx={{display: 'flex', alignItems: 'center'}}>
                                 <StarIcon />
@@ -105,7 +106,7 @@ export default function HomePage() {
                                 <GreenRightArrow />
                             </Box>
                         </Box>
-                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                        <Box sx={{display: 'flex', marginTop: '30px', gap: '50px'}}>
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                             <RecipeReviewCard />
@@ -123,7 +124,7 @@ export default function HomePage() {
                                 <GreenRightArrow />
                             </Box>
                         </Box>
-                        <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+                        <Box sx={{display: 'flex', marginTop: '30px', gap: '50px'}}>
                             <RecipeReviewCard />
                             <RecipeReviewCard />
                             <RecipeReviewCard />
