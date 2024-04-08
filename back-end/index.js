@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import { users } from "./router/users.js";
-import { categorys } from "./router/categorys.js";
+import { categories } from "./router/categories.js";
 import { orders } from "./router/order.js";
 import { foods } from "./router/foods.js";
 
@@ -20,7 +20,7 @@ mongoose
   });
 
 app.use("/users", users);
-app.use("/categorys", categorys);
+app.use("/categories", categories);
 app.use("/order", orders);
 app.use("/foods", foods);
 

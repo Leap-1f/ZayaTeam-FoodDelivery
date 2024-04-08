@@ -7,19 +7,19 @@ export const getAllFoods = async (req, res) => {
     const data = await FoodSModel.find();
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const getFood = async (req, res) => {
   const { id } = req.body;
   try {
-    const data = await FoodModel.findById(id);
+    const data = await FoodSModel.findById(id);
     console.log(data);
 
     //     res.send(data);
     res.send("food ajillaa");
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 
@@ -48,7 +48,7 @@ export const addFood = async (req, res) => {
       }
     );
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const editFood = async (req, res) => {
@@ -64,6 +64,6 @@ export const editFood = async (req, res) => {
     });
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
