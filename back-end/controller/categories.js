@@ -7,15 +7,15 @@ export const getCategory = async (req, res) => {
     const data = await CategoryModel.find(id).populate("foodId");
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
-export const getAllCategorys = async (req, res) => {
+export const getAllCategories = async (req, res) => {
   try {
     const data = await CategoryModel.find();
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const addCategory = async (req, res) => {
@@ -24,7 +24,7 @@ export const addCategory = async (req, res) => {
     const data = await CategoryModel.create({ name: name });
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const editCategory = async (req, res) => {
@@ -32,6 +32,6 @@ export const editCategory = async (req, res) => {
   try {
     const data = await CategoryModel.updateOne({ id }, { name: name });
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };

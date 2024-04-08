@@ -6,7 +6,7 @@ export const getAllOrders = async (req, res) => {
     const data = await OrderModel.find();
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 
@@ -17,7 +17,7 @@ export const getOrder = async (req, res) => {
 
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const addOrder = async (req, res) => {
@@ -46,7 +46,7 @@ export const addOrder = async (req, res) => {
     });
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const updateOrder = async (req, res) => {
@@ -54,6 +54,6 @@ export const updateOrder = async (req, res) => {
   try {
     const data = await OrderModel.updateOne({ id }, { name: name });
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };

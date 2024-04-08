@@ -8,6 +8,7 @@ export const OrderModel = model(
       type: Schema.Types.ObjectId,
     },
     orderNumber: Number,
+
     foods: [
       {
         type: Schema.Types.ObjectId,

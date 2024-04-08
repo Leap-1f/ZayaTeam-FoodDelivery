@@ -7,7 +7,7 @@ export const getAllAllUsers = async (req, res) => {
     const data = await UserModel.find();
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const getUserEmail = async (req, res) => {
@@ -19,7 +19,7 @@ export const getUserEmail = async (req, res) => {
 
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const updateUserPassword = async (req, res) => {
@@ -31,15 +31,16 @@ export const updateUserPassword = async (req, res) => {
     );
     res.send(updatedUserData);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const getUserField = async (req, res) => {
   const { email, passwaord } = req.body;
   try {
     const data = UserModel.find({ email: email, passwaord: passwaord });
+    res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const getUserById = async (req, res) => {
@@ -48,7 +49,7 @@ export const getUserById = async (req, res) => {
     const data = await UserModel.findById(id);
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const addUser = async (req, res) => {
@@ -62,7 +63,7 @@ export const addUser = async (req, res) => {
     });
     res.send(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
 export const editUserData = async (req, res) => {
@@ -74,6 +75,6 @@ export const editUserData = async (req, res) => {
     );
     res.sent(data);
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err);
   }
 };
