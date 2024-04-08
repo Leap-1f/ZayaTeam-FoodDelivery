@@ -27,7 +27,7 @@ const LinkItem: React.FC<LinkItemProps> = ({ text, href }) => {
 };
 
 const linkItems = [
-  { text: "Нүүр", href: "@/components/pages/layout/index" },
+  { text: "Нүүр", href: "../" },
   { text: "Холбоо барих", href: "@/components/pages/layout/contact" },
   { text: "Хоолны цэс", href: "@/components/pages/layout/menu" },
   { text: "Үйлчилгээний нөхцөл", href: "../terms/termsofservice" },
@@ -44,10 +44,7 @@ const Footer: React.FC = () => {
       sx={{
         display: "flex",
         width: "100vw",
-        position: "absolute",
-        left: 0,
-        right: 0,
-        bottom: 0,
+
       }}
     >
       <Box

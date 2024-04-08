@@ -12,7 +12,7 @@ export const getCategory = async (req, res) => {
 };
 export const getAllCategories = async (req, res) => {
   try {
-    const data = await CategoryModel.find();
+    const data = await CategoryModel.find(id).populate("foodId");
     res.send(data);
   } catch (err) {
     res.status(400).send(err);

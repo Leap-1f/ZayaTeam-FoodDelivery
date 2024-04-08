@@ -14,3 +14,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(<Component {...pageProps} />);
 }
+
+//         Zulsariih iim contexted orooson bna
+// <AdminContextProvider>
+//   <UserContextProvider>
+//     <Component {...pageProps} />
+//   </UserContextProvider>
+// </AdminContextProvider>;
