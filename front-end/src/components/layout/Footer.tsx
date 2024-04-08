@@ -40,7 +40,16 @@ const linkItems = [
 
 const Footer: React.FC = () => {
   return (
-    <Box sx={{ display: "flex", width: "100vw" }}>
+    <Box
+      sx={{
+        display: "flex",
+        width: "100vw",
+        position: "absolute",
+        left: 0,
+        right: 0,
+        bottom: 0,
+      }}
+    >
       <Box
         component="footer"
         sx={{
