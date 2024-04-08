@@ -1,6 +1,7 @@
+import { UserProfile } from "@/components/UserProfile/UserProfile";
 import { getUserLayout } from "@/components/layout/UserLayout";
 
 export default function Home() {
-  return <></>
+  return <><UserProfile/></>;
 }
 Home.getLayout = getUserLayout;

@@ -63,8 +63,8 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
-      <Container maxWidth="xl">
+    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF", width: '100%' }}>
+      <Container sx={{width: '100%'}}>
         <Toolbar disableGutters>
           <PineconeLogo />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}></Box>
