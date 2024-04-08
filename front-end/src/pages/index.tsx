@@ -1,6 +1,6 @@
 import { getUserLayout } from "@/components/layout/UserLayout";
 
 export default function Home() {
-  return <></>;
+  return <></>
 }
 Home.getLayout = getUserLayout;

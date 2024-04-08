@@ -53,7 +53,7 @@ export const SignUp = () => {
                 borderColor: "#ECEDF0",
                 width: "400px",
                 borderRadius: "4px",
-              }}
+              }} 
             ></Textfield>
           </Box>
           <Box>
