@@ -25,4 +25,5 @@ export default function Home() {
     }
   };
   return <></>;
+}
 Home.getLayout = getUserLayout;
