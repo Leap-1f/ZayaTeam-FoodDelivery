@@ -14,7 +14,7 @@ import { Typography } from "@mui/material";
 
 export default function RecipeReviewCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{width : '15%'}}>
       <CardMedia
         component="img"
         height="186"

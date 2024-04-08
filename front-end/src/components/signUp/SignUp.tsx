@@ -88,7 +88,7 @@ export const SignUp = ({ pageroute }: PropsType) => {
                 borderColor: "#ECEDF0",
                 width: "400px",
                 borderRadius: "4px",
-              }}
+              }} 
             ></Textfield>
           </Box>
           <Box>
