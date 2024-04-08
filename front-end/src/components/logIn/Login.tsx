@@ -1,7 +1,39 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
+import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { useState } from "react";
+const DEPLOYMENT_DB = process.env.NEXT_PUBLIC_SERVER_URL;
+interface setterFunction {
+  pageroute: () => void;
+}
 
-export default function LogIn() {
+interface UserDataType {
+  name: String;
+  email: String;
+  password: String;
+  phone: Number;
+}
+
+export default function LogIn({ pageroute }: setterFunction) {
+  const [userEmail, setUserEmail] = useState<string>("");
+  const [userData, setUserData] = useState<UserDataType[]>([]);
+  const [password, setPassword] = useState<string>("");
+  const loginData = async () => {
+    try {
+      const res = await fetch(`${DEPLOYMENT_DB}/users/login`, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: userEmail, password: password }),
+      });
+      const data = await res.json();
+      setUserData(data);
+    } catch (err) {
+      alert(err);
+    }
+  };
+
   return (
     <>
       <Box
@@ -25,11 +57,18 @@ export default function LogIn() {
               sx={{ width: "100%", backgroundColor: "#F7F7F8" }}
               id="outlined-basic"
               label="Имэйл хаягаа оруулна уу  "
+              onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                setUserEmail(event.target.value);
+                console.log(event.target.value);
+              }}
             ></TextField>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "4px" }}>
             <Typography variant="h6">Нууц үг </Typography>
             <TextField
+              onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                setPassword(event.target.value);
+              }}
               sx={{ width: "100%", backgroundColor: "#F7F7F8" }}
               id="outlined-basic"
               label="Нууц үг  "
@@ -41,6 +80,7 @@ export default function LogIn() {
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "32px" }}>
           <Button
+            onClick={loginData}
             variant="contained"
             sx={{
               color: "black",
@@ -53,14 +93,15 @@ export default function LogIn() {
             Нэвтрэх
           </Button>
           <Typography sx={{ textAlign: "center" }}>Эсвэл </Typography>
-          <Link href={"./signUp/signup"}>
-            <Button
-              variant="outlined"
-              sx={{ color: "black", borderColor: "#18BA51", width: "100%" }}
-            >
-              Бүртгүүлэх
-            </Button>
-          </Link>
+          <Button
+            onClick={() => {
+              pageroute();
+            }}
+            variant="outlined"
+            sx={{ color: "black", borderColor: "#18BA51", width: "100%" }}
+          >
+            Бүртгүүлэх
+          </Button>
         </Box>
       </Box>
     </>

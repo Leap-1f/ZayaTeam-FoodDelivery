@@ -5,9 +5,9 @@ import Footer from "./Footer";
 const UserLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Header></Header>
+      <Header />
       {children}
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
