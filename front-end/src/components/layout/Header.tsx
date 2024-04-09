@@ -16,8 +16,6 @@ import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-const pages = ["НҮҮР", "ХООЛНЫ ЦЭС", "ХҮРГЭЛТИЙН БҮС"];
-
 export default function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -52,26 +50,23 @@ export default function Header() {
     width: "100%",
   }));
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState("one");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
+  const StyledTab = styled(Tab)({
+    "&.Mui-selected": {
+      color: "#18BA51",
+    },
+  });
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#FFFFFF", boxShadow: "none" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PineconeLogo />
@@ -81,33 +76,21 @@ export default function Header() {
             value={value}
             onChange={handleChange}
             textColor="primary"
-            TabIndicatorProps={{
-              style: { display: 'none' }
-            }}
-            aria-label="secondary tabs example"
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              fontFamily: "SF Pro Text",
+              fontFamily: "sans-serif",
             }}
           >
-            <Tab value="one" label="Item One" />
-            <Tab value="two" label="Item Two" />
-            <Tab value="three" label="Item Three" />
-            {/* {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "#000000",
-                  display: "block",
-                  marginLeft: "20px",
-                }}
-              >
-                {page}
-              </Button>
-            ))} */}
+            <Link href="/">
+              <Tab sx={{ color: "black" }} label="НҮҮР" />
+            </Link>
+            <Link href="/menu">
+              <Tab sx={{ color: "black" }} label="ХООЛНЫ ЦЭС" />
+            </Link>
+            <Link href="/deliveryArea">
+              <Tab sx={{ color: "black" }} label="ХҮРГЭЛТИЙН БҮС" />
+            </Link>
           </Tabs>
           <Search
             sx={{

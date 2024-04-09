@@ -27,13 +27,13 @@ const LinkItem: React.FC<LinkItemProps> = ({ text, href }) => {
 };
 
 const linkItems = [
-  { text: "Нүүр", href: "../" },
+  { text: "Нүүр", href: "/" },
   { text: "Холбоо барих", href: "@/components/pages/layout/contact" },
-  { text: "Хоолны цэс", href: "@/components/pages/layout/menu" },
-  { text: "Үйлчилгээний нөхцөл", href: "../terms/termsofservice" },
+  { text: "Хоолны цэс", href: "/menu" },
+  { text: "Үйлчилгээний нөхцөл", href: "./footInfo/TermsOfService" },
   {
     text: "Хүргэлтийн бүс",
-    href: "@/components/pages/layout/delivery-zone",
+    href: "/deliveryArea",
   },
   { text: "Нууцлалын бодлого", href: "@/components/pages/layout/privacy" },
 ];

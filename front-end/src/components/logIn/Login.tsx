@@ -74,8 +74,8 @@ export default function LogIn({ pageroute }: setterFunction) {
               label="Нууц үг  "
             ></TextField>
           </Box>
-          <Link href={"./forgetPass/forgetPassWord"}>
-            <Typography sx={{ textAlign: "end" }}>Нууц үг сэргээх</Typography>
+          <Link href={"."}>
+            <Typography sx={{ textAlign: "end", color: "black", textDecoration: "none",}}>Нууц үг сэргээх</Typography>
           </Link>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "32px" }}>
