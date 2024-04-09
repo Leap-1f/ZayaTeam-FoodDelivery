@@ -1,6 +1,6 @@
 import { getUserLayout } from "@/components/layout/UserLayout";
 import { useState } from "react";
-import HomePage from "@/components/home/HomePage";
+import { HomePage } from "@/components/home/HomePage";
 const DEPLOYMENT_DB = process.env.NEXT_PUBLIC_SERVER_URL;
 interface AllOrderType {
   userId: String;

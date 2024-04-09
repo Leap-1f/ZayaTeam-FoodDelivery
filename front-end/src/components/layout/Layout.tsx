@@ -5,7 +5,7 @@ interface childrenType {
   children: ReactNode;
 }
 
-export default function Layout({ children }: childrenType) {
+export const Layout = ({ children }: childrenType) => {
   return (
     <>
       <Header></Header>
@@ -13,4 +13,4 @@ export default function Layout({ children }: childrenType) {
       <Footer />
     </>
   );
-}
+};

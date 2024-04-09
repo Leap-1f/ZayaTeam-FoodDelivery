@@ -13,6 +13,8 @@ import InputBase from "@mui/material/InputBase";
 import Order from "../orderDetail/Order";
 import Link from "next/link";
 import { useState } from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
 const pages = ["НҮҮР", "ХООЛНЫ ЦЭС", "ХҮРГЭЛТИЙН БҮС"];
 
@@ -62,6 +64,12 @@ export default function Header() {
     setAnchorElUser(null);
   };
 
+  const [value, setValue] = React.useState('one');
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+
   return (
     <AppBar position="static" sx={{ backgroundColor: "#FFFFFF" }}>
       <Container maxWidth="xl">
@@ -69,14 +77,24 @@ export default function Header() {
           <PineconeLogo />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}></Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Box
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            textColor="primary"
+            TabIndicatorProps={{
+              style: { display: 'none' }
+            }}
+            aria-label="secondary tabs example"
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               fontFamily: "SF Pro Text",
             }}
           >
-            {pages.map((page) => (
+            <Tab value="one" label="Item One" />
+            <Tab value="two" label="Item Two" />
+            <Tab value="three" label="Item Three" />
+            {/* {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -89,8 +107,8 @@ export default function Header() {
               >
                 {page}
               </Button>
-            ))}
-          </Box>
+            ))} */}
+          </Tabs>
           <Search
             sx={{
               border: "solid",
